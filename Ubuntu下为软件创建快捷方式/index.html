@@ -119,7 +119,7 @@
 <meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04cmd_dir.png">
 <meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04md.png">
 <meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04desktop.png">
-<meta property="og:updated_time" content="2018-08-22T02:44:47.395Z">
+<meta property="og:updated_time" content="2018-08-22T06:07:52.495Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu下为软件创建快捷方式">
 <meta name="twitter:description" content="ubuntu/linux mint上有很多软件的安装不是直接通过APT管理器从仓库中安装的,这样就会有一个问题,我们启动软件的时候只能在软件的目录通过命令启动,典型的例子是eclipse软件,我们是直接下载软件包,然后解压点击eclipse或命令行输入eclipse运行的.这样使用起来不太方便,今天就介绍一种方法,可以为这些不是通过APT安装的软件创建快捷方式,在dash中可以直接启动. 我用的是">
@@ -355,7 +355,7 @@
                 
               
 
-              <time title="创建时间：2015-08-04 15:58:22" itemprop="dateCreated datePublished" datetime="2015-08-04T15:58:22+08:00">2015-08-04</time>
+              <time title="创建时间：2016-08-04 15:58:22" itemprop="dateCreated datePublished" datetime="2016-08-04T15:58:22+08:00">2016-08-04</time>
             
 
             
@@ -397,9 +397,48 @@
 
           
           
+             <span id="/Ubuntu下为软件创建快捷方式/" class="leancloud_visitors" data-flag-title="Ubuntu下为软件创建快捷方式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
           
 
           
@@ -419,7 +458,7 @@
       
         <p>ubuntu/linux mint上有很多软件的安装不是直接通过APT管理器从仓库中安装的,这样就会有一个问题,我们启动软件的时候只能在软件的目录通过命令启动,典型的例子是eclipse软件,我们是直接下载软件包,然后解压点击eclipse或命令行输入eclipse运行的.这样使用起来不太方便,今天就介绍一种方法,可以为这些不是通过APT安装的软件创建快捷方式,在dash中可以直接启动.</p>
 <p>我用的是Linux mint 发行版,所以就以这个版本为基础进行演示.其实ubuntu的操作是一样的.</p>
-<p>##所有的快捷方式都是.desktop文件##<br>其实我们看到的在桌面上或dash中的软件图标都是.desktop的文件,例如我们用terminal进入desktop:<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wyq@wyq-m81 ~/Desktop $ ls</span><br><span class="line">CmdMarkdown.desktop  eclipse.desktop  goagent-gtk.desktop  google-chrome-unstable.desktop  jetbrains-studio.desktop  meld.desktop  shadowsocks-qt5.desktop  skype.desktop  SmartcardService  virtualbox.desktop</span><br></pre></td></tr></table></figure></p>
+<h2 id="所有的快捷方式都是-desktop文件"><a href="#所有的快捷方式都是-desktop文件" class="headerlink" title="所有的快捷方式都是.desktop文件"></a>所有的快捷方式都是.desktop文件</h2><p>其实我们看到的在桌面上或dash中的软件图标都是.desktop的文件,例如我们用terminal进入desktop:<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wyq@wyq-m81 ~/Desktop $ ls</span><br><span class="line">CmdMarkdown.desktop  eclipse.desktop  goagent-gtk.desktop  google-chrome-unstable.desktop  jetbrains-studio.desktop  meld.desktop  shadowsocks-qt5.desktop  skype.desktop  SmartcardService  virtualbox.desktop</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>可以很清楚的看到这些快捷图标都是.desktop文件,那这些文件存在哪呢.<br>有两个地方:</p>
 <blockquote>
@@ -482,8 +521,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/win8安装ubuntu双系统/" rel="next" title="猴子也能看懂的UEFI下Win8+Ubuntu双系统安装(Lenovo xiaoxin V4000)">
-                <i class="fa fa-chevron-left"></i> 猴子也能看懂的UEFI下Win8+Ubuntu双系统安装(Lenovo xiaoxin V4000)
+              <a href="/Ubuntu+Hexo+GithubPages搭建静态博客/" rel="next" title="Hexo+Ubuntu+GithubPages搭建个人博客(基础篇)">
+                <i class="fa fa-chevron-left"></i> Hexo+Ubuntu+GithubPages搭建个人博客(基础篇)
               </a>
             
           </div>
@@ -492,8 +531,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Android序列化/" rel="prev" title="Android序列化">
-                Android序列化 <i class="fa fa-chevron-right"></i>
+              <a href="/ubuntu小巧好用的类似QQ截图的软件/" rel="prev" title="ubuntu小巧好用的类似QQ截图的软件DeepinScrot">
+                ubuntu小巧好用的类似QQ截图的软件DeepinScrot <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -546,8 +585,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -579,7 +627,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -614,7 +664,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -641,6 +695,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#所有的快捷方式都是-desktop文件"><span class="nav-number">1.</span> <span class="nav-text">所有的快捷方式都是.desktop文件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -661,7 +731,21 @@
   <span class="author" itemprop="copyrightHolder">YanceyWang</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">15k</span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">14 分钟</span>
   
 </div>
 

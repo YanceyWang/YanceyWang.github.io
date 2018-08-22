@@ -354,142 +354,7 @@
                 
               
 
-              <time title="创建时间：2016-08-22 11:38:20" itemprop="dateCreated datePublished" datetime="2016-08-22T11:38:20+08:00">2016-08-22</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yancey.top/Ubuntu下为软件创建快捷方式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="YanceyWang">
-      <meta itemprop="description" content="Android,安卓,linux,ubuntu">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="解忧杂货店">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Ubuntu下为软件创建快捷方式/" itemprop="url">
-                  Ubuntu下为软件创建快捷方式
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2015-08-04 15:58:22" itemprop="dateCreated datePublished" datetime="2015-08-04T15:58:22+08:00">2015-08-04</time>
+              <time title="创建时间：2017-03-30 11:38:20" itemprop="dateCreated datePublished" datetime="2017-03-30T11:38:20+08:00">2017-03-30</time>
             
 
             
@@ -507,7 +372,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/玩机/" itemprop="url" rel="index"><span itemprop="name">玩机</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android进阶/" itemprop="url" rel="index"><span itemprop="name">Android进阶</span></a></span>
 
                 
                 
@@ -521,9 +386,48 @@
 
           
           
+             <span id="/Android序列化/" class="leancloud_visitors" data-flag-title="Android序列化">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">0</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -542,16 +446,9 @@
 
       
         
-          <p>ubuntu/linux mint上有很多软件的安装不是直接通过APT管理器从仓库中安装的,这样就会有一个问题,我们启动软件的时候只能在软件的目录通过命令启动,典型的例子是eclipse软件,我们是直接下载软件包,然后解压点击eclipse或命令行输入eclipse运行的.这样使用起来不太方便,今天就介绍一种方法,可以为这些不是通过APT安装的软件创建快捷方式,在dash中可以直接启动.</p>
-<p>我用的是Linux mint 发行版,所以就以这个版本为基础进行演示.其实ubuntu的操作是一样的.</p>
-<p>##所有的快捷方式都是.desktop文件##<br>其实我们看到的在桌面上或dash中的软件图标都是.desktop的文件,例如我们用terminal进入desktop:<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wyq@wyq-m81 ~/Desktop $ ls</span><br><span class="line">CmdMarkdown.desktop  eclipse.desktop  goagent-gtk.desktop  google-chrome-unstable.desktop  jetbrains-studio.desktop  meld.desktop  shadowsocks-qt5.desktop  skype.desktop  SmartcardService  virtualbox.desktop</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/Ubuntu下为软件创建快捷方式/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            
+          
         
       
     </div>
@@ -649,7 +546,7 @@
                 
               
 
-              <time title="创建时间：2015-08-04 14:30:26" itemprop="dateCreated datePublished" datetime="2015-08-04T14:30:26+08:00">2015-08-04</time>
+              <time title="创建时间：2017-03-24 14:30:26" itemprop="dateCreated datePublished" datetime="2017-03-24T14:30:26+08:00">2017-03-24</time>
             
 
             
@@ -681,9 +578,48 @@
 
           
           
+             <span id="/win8安装ubuntu双系统/" class="leancloud_visitors" data-flag-title="猴子也能看懂的UEFI下Win8+Ubuntu双系统安装(Lenovo xiaoxin V4000)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">5.6k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">5 分钟</span>
+              
+            </div>
           
 
           
@@ -705,11 +641,9 @@
           <blockquote>
 <p> <strong>前言</strong><br>上次在公司搭建好了博客，想着回家在win8上花几分钟搭建环境，当晚发第一篇，结果没想到习惯了linux后在win8上进行工作感觉寸步难行。所以干脆在家的电脑上也给装上了Ubuntu，今天记录下安装双系统的过程以及一些自己的总结。</p>
 </blockquote>
-<p>##<strong>让人烦躁却不得不知道的术语</strong>##</p>
-<p><strong>首先要明白,当我们按下电脑的开机键后,电脑在启动系统之前最先执行的一段程序是放在主板上的只读程序段名字叫Firmware,至于具体电脑的寄存器是怎么复位的,寄存器是怎么寻址到Firmware的,请看知乎大神的<a href="http://www.zhihu.com/question/22364502" target="_blank" rel="noopener">回答</a>. 我们只需要知道有这段程序,并且在启动系统前会走这段路程就足够了. 目前有两种类型的Firmware,一种是我们以前经常听到的 BIOS(发音:/ˈbaɪ.ɒs/),,那还有一种就是近几年兴起的用来代替BIOS的UEFI发音(pronounced as an initialism U-E-F-I or like “unify” without the n[a])),当我们按下电脑开机键后,电脑厂商的LOGO出来的时候狂按(F2|F12|F9|del 具体各个厂商不一样,我的联想小新就是F2)键就能进入到Firmware控制界面(Firmware setup utility,),接下来我们就看下这两种Firmware</strong></p>
-<p>###BIOS与UEFI###</p>
-<p>BIOS的启动方式是通过读取执行硬盘第一个扇区的代码,之后通过这段代码定位并且执行别的代码.由于BIOS的空间限制并且BIOS只能执行16bit的代码,BIOS在使用中有很多限制.相反的,UEFI 通过加载硬盘ESP分区上的efi文件来启动系统,EFI 启动加载器程序可以利用EFI 启动服务来做很多事情,例如从硬盘读取文件.</p>
-<p>###<span id="secureboot">Secure Boot</span>###<br>Secure Boot只是UEFI的一个部分。两者的关系是局部与整体的关系。<br>Secure Boot的目的，是防止恶意软件侵入。它的做法就是采用密钥。UEFI规定，主板出厂的时候，可以内置一些可靠的公钥。然后，任何想要在这块主板上加载的操作系统或者硬件驱动程序，都必须通过这些公钥的认证。也就是说，这些软件必须用对应的私钥签署过，否则主板拒绝加载。由于恶意软件不可能通过认证，因此就没有办法感染Boot。<br>这个设想是好的。但是，UEFI没规定哪些公钥是可靠的，也没规定谁负责颁发这些公钥，都留给硬件厂商自己决定。<br>现在，微软就是要求，主板厂商内置Windows 8的公钥。</p>
+<h2 id="让人烦躁却不得不知道的术语"><a href="#让人烦躁却不得不知道的术语" class="headerlink" title="让人烦躁却不得不知道的术语"></a><strong>让人烦躁却不得不知道的术语</strong></h2><p><strong>首先要明白,当我们按下电脑的开机键后,电脑在启动系统之前最先执行的一段程序是放在主板上的只读程序段名字叫Firmware,至于具体电脑的寄存器是怎么复位的,寄存器是怎么寻址到Firmware的,请看知乎大神的<a href="http://www.zhihu.com/question/22364502" target="_blank" rel="noopener">回答</a>. 我们只需要知道有这段程序,并且在启动系统前会走这段路程就足够了. 目前有两种类型的Firmware,一种是我们以前经常听到的 BIOS(发音:/ˈbaɪ.ɒs/),,那还有一种就是近几年兴起的用来代替BIOS的UEFI发音(pronounced as an initialism U-E-F-I or like “unify” without the n[a])),当我们按下电脑开机键后,电脑厂商的LOGO出来的时候狂按(F2|F12|F9|del 具体各个厂商不一样,我的联想小新就是F2)键就能进入到Firmware控制界面(Firmware setup utility,),接下来我们就看下这两种Firmware</strong></p>
+<h3 id="BIOS与UEFI"><a href="#BIOS与UEFI" class="headerlink" title="BIOS与UEFI"></a>BIOS与UEFI</h3><p>BIOS的启动方式是通过读取执行硬盘第一个扇区的代码,之后通过这段代码定位并且执行别的代码.由于BIOS的空间限制并且BIOS只能执行16bit的代码,BIOS在使用中有很多限制.相反的,UEFI 通过加载硬盘ESP分区上的efi文件来启动系统,EFI 启动加载器程序可以利用EFI 启动服务来做很多事情,例如从硬盘读取文件.</p>
+<h3 id="Secure-Boot"><a href="#Secure-Boot" class="headerlink" title="Secure Boot"></a><span id="secureboot">Secure Boot</span></h3><p>Secure Boot只是UEFI的一个部分。两者的关系是局部与整体的关系。<br>Secure Boot的目的，是防止恶意软件侵入。它的做法就是采用密钥。UEFI规定，主板出厂的时候，可以内置一些可靠的公钥。然后，任何想要在这块主板上加载的操作系统或者硬件驱动程序，都必须通过这些公钥的认证。也就是说，这些软件必须用对应的私钥签署过，否则主板拒绝加载。由于恶意软件不可能通过认证，因此就没有办法感染Boot。<br>这个设想是好的。但是，UEFI没规定哪些公钥是可靠的，也没规定谁负责颁发这些公钥，都留给硬件厂商自己决定。<br>现在，微软就是要求，主板厂商内置Windows 8的公钥。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/win8安装ubuntu双系统/#more" rel="contents">
@@ -814,7 +748,7 @@
                 
               
 
-              <time title="创建时间：2015-07-31 09:46:52" itemprop="dateCreated datePublished" datetime="2015-07-31T09:46:52+08:00">2015-07-31</time>
+              <time title="创建时间：2016-10-25 09:46:52" itemprop="dateCreated datePublished" datetime="2016-10-25T09:46:52+08:00">2016-10-25</time>
             
 
             
@@ -846,9 +780,48 @@
 
           
           
+             <span id="/ubuntu小巧好用的类似QQ截图的软件/" class="leancloud_visitors" data-flag-title="ubuntu小巧好用的类似QQ截图的软件DeepinScrot">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">653</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
           
 
           
@@ -871,6 +844,205 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/ubuntu小巧好用的类似QQ截图的软件/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yancey.top/Ubuntu下为软件创建快捷方式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YanceyWang">
+      <meta itemprop="description" content="Android,安卓,linux,ubuntu">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="解忧杂货店">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Ubuntu下为软件创建快捷方式/" itemprop="url">
+                  Ubuntu下为软件创建快捷方式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2016-08-04 15:58:22" itemprop="dateCreated datePublished" datetime="2016-08-04T15:58:22+08:00">2016-08-04</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/玩机/" itemprop="url" rel="index"><span itemprop="name">玩机</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/Ubuntu下为软件创建快捷方式/" class="leancloud_visitors" data-flag-title="Ubuntu下为软件创建快捷方式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>ubuntu/linux mint上有很多软件的安装不是直接通过APT管理器从仓库中安装的,这样就会有一个问题,我们启动软件的时候只能在软件的目录通过命令启动,典型的例子是eclipse软件,我们是直接下载软件包,然后解压点击eclipse或命令行输入eclipse运行的.这样使用起来不太方便,今天就介绍一种方法,可以为这些不是通过APT安装的软件创建快捷方式,在dash中可以直接启动.</p>
+<p>我用的是Linux mint 发行版,所以就以这个版本为基础进行演示.其实ubuntu的操作是一样的.</p>
+<h2 id="所有的快捷方式都是-desktop文件"><a href="#所有的快捷方式都是-desktop文件" class="headerlink" title="所有的快捷方式都是.desktop文件"></a>所有的快捷方式都是.desktop文件</h2><p>其实我们看到的在桌面上或dash中的软件图标都是.desktop的文件,例如我们用terminal进入desktop:<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wyq@wyq-m81 ~/Desktop $ ls</span><br><span class="line">CmdMarkdown.desktop  eclipse.desktop  goagent-gtk.desktop  google-chrome-unstable.desktop  jetbrains-studio.desktop  meld.desktop  shadowsocks-qt5.desktop  skype.desktop  SmartcardService  virtualbox.desktop</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Ubuntu下为软件创建快捷方式/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -972,7 +1144,7 @@
                 
               
 
-              <time title="创建时间：2015-07-30 11:25:44" itemprop="dateCreated datePublished" datetime="2015-07-30T11:25:44+08:00">2015-07-30</time>
+              <time title="创建时间：2016-07-30 11:25:44" itemprop="dateCreated datePublished" datetime="2016-07-30T11:25:44+08:00">2016-07-30</time>
             
 
             
@@ -1004,9 +1176,48 @@
 
           
           
+             <span id="/Ubuntu+Hexo+GithubPages搭建静态博客/" class="leancloud_visitors" data-flag-title="Hexo+Ubuntu+GithubPages搭建个人博客(基础篇)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">6.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">6 分钟</span>
+              
+            </div>
           
 
           
@@ -1029,9 +1240,7 @@
 <p><strong>前言</strong><br>最近发生了一些事情，不知道该怎么面对，想让自己忙起来，没有时间去想别的事情。同时，让我对过去进行了一个反思，以及对将来进行了初步的规划，我想改变，也一定会改变，借此博客，记录我成长的点点滴滴。希望我希望看到的人能看到，也希望能给大家带来点帮助。</p>
 </blockquote>
 <p>第一篇博客就用来记录下我搭建这个独立博客的经过吧</p>
-<p>##<strong>准备</strong>##</p>
-<p>###<strong>静态博客和动态博客</strong>###</p>
-<p>所谓静态博客，它是在写好文章后，在本地生成静态页面后再上传到服务器（Jekyll在Github Page上的例子有点特殊，后面会讲到），而不是像传统的Wordpress等基于动态语言、数据库博客那样在访问的时候从数据库读取数据动态生成页面。静态博客最大的优点是速度快，对网站使用的空间要求也不高，想找一个不支持静态页面的空间也是挺难的，缺点嘛，功能没有Wordpress等传统博客那么强。静态博客的”静态”主要体现在浏览者的角度，而不是写作者的角度，其最终的HTML文件，也是计算机生成的。静态博客与动态博客的差别就好像去超市里买一罐咖啡与去咖啡厅点一杯咖啡的差别。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a><strong>准备</strong></h2><h3 id="静态博客和动态博客"><a href="#静态博客和动态博客" class="headerlink" title="静态博客和动态博客"></a><strong>静态博客和动态博客</strong></h3><p>所谓静态博客，它是在写好文章后，在本地生成静态页面后再上传到服务器（Jekyll在Github Page上的例子有点特殊，后面会讲到），而不是像传统的Wordpress等基于动态语言、数据库博客那样在访问的时候从数据库读取数据动态生成页面。静态博客最大的优点是速度快，对网站使用的空间要求也不高，想找一个不支持静态页面的空间也是挺难的，缺点嘛，功能没有Wordpress等传统博客那么强。静态博客的”静态”主要体现在浏览者的角度，而不是写作者的角度，其最终的HTML文件，也是计算机生成的。静态博客与动态博客的差别就好像去超市里买一罐咖啡与去咖啡厅点一杯咖啡的差别。</p>
 <p>在静态博客出现之前，更多的人选择的是传统的动态博客。传统的动态博客一般有2种常见的方法：</p>
 <blockquote>
 <ul>
@@ -1150,7 +1359,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1185,7 +1396,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1232,7 +1447,21 @@
   <span class="author" itemprop="copyrightHolder">YanceyWang</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">15k</span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">14 分钟</span>
   
 </div>
 

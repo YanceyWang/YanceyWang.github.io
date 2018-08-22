@@ -108,13 +108,13 @@
 
 
 
-  <meta name="description" content="前言上次在公司搭建好了博客，想着回家在win8上花几分钟搭建环境，当晚发第一篇，结果没想到习惯了linux后在win8上进行工作感觉寸步难行。所以干脆在家的电脑上也给装上了Ubuntu，今天记录下安装双系统的过程以及一些自己的总结。  ##让人烦躁却不得不知道的术语## 首先要明白,当我们按下电脑的开机键后,电脑在启动系统之前最先执行的一段程序是放在主板上的只读程序段名字叫Firmware,至">
+  <meta name="description" content="前言上次在公司搭建好了博客，想着回家在win8上花几分钟搭建环境，当晚发第一篇，结果没想到习惯了linux后在win8上进行工作感觉寸步难行。所以干脆在家的电脑上也给装上了Ubuntu，今天记录下安装双系统的过程以及一些自己的总结。  让人烦躁却不得不知道的术语首先要明白,当我们按下电脑的开机键后,电脑在启动系统之前最先执行的一段程序是放在主板上的只读程序段名字叫Firmware,至于具体电脑">
 <meta name="keywords" content="BIOS,UEFI,MBR,GPT,双系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="猴子也能看懂的UEFI下Win8+Ubuntu双系统安装(Lenovo xiaoxin V4000)">
 <meta property="og:url" content="http://yancey.top/win8安装ubuntu双系统/index.html">
 <meta property="og:site_name" content="解忧杂货店">
-<meta property="og:description" content="前言上次在公司搭建好了博客，想着回家在win8上花几分钟搭建环境，当晚发第一篇，结果没想到习惯了linux后在win8上进行工作感觉寸步难行。所以干脆在家的电脑上也给装上了Ubuntu，今天记录下安装双系统的过程以及一些自己的总结。  ##让人烦躁却不得不知道的术语## 首先要明白,当我们按下电脑的开机键后,电脑在启动系统之前最先执行的一段程序是放在主板上的只读程序段名字叫Firmware,至">
+<meta property="og:description" content="前言上次在公司搭建好了博客，想着回家在win8上花几分钟搭建环境，当晚发第一篇，结果没想到习惯了linux后在win8上进行工作感觉寸步难行。所以干脆在家的电脑上也给装上了Ubuntu，今天记录下安装双系统的过程以及一些自己的总结。  让人烦躁却不得不知道的术语首先要明白,当我们按下电脑的开机键后,电脑在启动系统之前最先执行的一段程序是放在主板上的只读程序段名字叫Firmware,至于具体电脑">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04installError.jpg">
 <meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04DiskDeniusPartition.jpg">
@@ -134,10 +134,10 @@
 <meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04IMAG0015.jpg">
 <meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04IMAG0016.jpg">
 <meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04efibootmgr.png">
-<meta property="og:updated_time" content="2018-08-22T02:44:47.395Z">
+<meta property="og:updated_time" content="2018-08-22T06:07:06.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="猴子也能看懂的UEFI下Win8+Ubuntu双系统安装(Lenovo xiaoxin V4000)">
-<meta name="twitter:description" content="前言上次在公司搭建好了博客，想着回家在win8上花几分钟搭建环境，当晚发第一篇，结果没想到习惯了linux后在win8上进行工作感觉寸步难行。所以干脆在家的电脑上也给装上了Ubuntu，今天记录下安装双系统的过程以及一些自己的总结。  ##让人烦躁却不得不知道的术语## 首先要明白,当我们按下电脑的开机键后,电脑在启动系统之前最先执行的一段程序是放在主板上的只读程序段名字叫Firmware,至">
+<meta name="twitter:description" content="前言上次在公司搭建好了博客，想着回家在win8上花几分钟搭建环境，当晚发第一篇，结果没想到习惯了linux后在win8上进行工作感觉寸步难行。所以干脆在家的电脑上也给装上了Ubuntu，今天记录下安装双系统的过程以及一些自己的总结。  让人烦躁却不得不知道的术语首先要明白,当我们按下电脑的开机键后,电脑在启动系统之前最先执行的一段程序是放在主板上的只读程序段名字叫Firmware,至于具体电脑">
 <meta name="twitter:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04installError.jpg">
 
 
@@ -370,7 +370,7 @@
                 
               
 
-              <time title="创建时间：2015-08-04 14:30:26" itemprop="dateCreated datePublished" datetime="2015-08-04T14:30:26+08:00">2015-08-04</time>
+              <time title="创建时间：2017-03-24 14:30:26" itemprop="dateCreated datePublished" datetime="2017-03-24T14:30:26+08:00">2017-03-24</time>
             
 
             
@@ -412,9 +412,48 @@
 
           
           
+             <span id="/win8安装ubuntu双系统/" class="leancloud_visitors" data-flag-title="猴子也能看懂的UEFI下Win8+Ubuntu双系统安装(Lenovo xiaoxin V4000)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">5.6k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">5 分钟</span>
+              
+            </div>
           
 
           
@@ -435,13 +474,11 @@
         <blockquote>
 <p> <strong>前言</strong><br>上次在公司搭建好了博客，想着回家在win8上花几分钟搭建环境，当晚发第一篇，结果没想到习惯了linux后在win8上进行工作感觉寸步难行。所以干脆在家的电脑上也给装上了Ubuntu，今天记录下安装双系统的过程以及一些自己的总结。</p>
 </blockquote>
-<p>##<strong>让人烦躁却不得不知道的术语</strong>##</p>
-<p><strong>首先要明白,当我们按下电脑的开机键后,电脑在启动系统之前最先执行的一段程序是放在主板上的只读程序段名字叫Firmware,至于具体电脑的寄存器是怎么复位的,寄存器是怎么寻址到Firmware的,请看知乎大神的<a href="http://www.zhihu.com/question/22364502" target="_blank" rel="noopener">回答</a>. 我们只需要知道有这段程序,并且在启动系统前会走这段路程就足够了. 目前有两种类型的Firmware,一种是我们以前经常听到的 BIOS(发音:/ˈbaɪ.ɒs/),,那还有一种就是近几年兴起的用来代替BIOS的UEFI发音(pronounced as an initialism U-E-F-I or like “unify” without the n[a])),当我们按下电脑开机键后,电脑厂商的LOGO出来的时候狂按(F2|F12|F9|del 具体各个厂商不一样,我的联想小新就是F2)键就能进入到Firmware控制界面(Firmware setup utility,),接下来我们就看下这两种Firmware</strong></p>
-<p>###BIOS与UEFI###</p>
-<p>BIOS的启动方式是通过读取执行硬盘第一个扇区的代码,之后通过这段代码定位并且执行别的代码.由于BIOS的空间限制并且BIOS只能执行16bit的代码,BIOS在使用中有很多限制.相反的,UEFI 通过加载硬盘ESP分区上的efi文件来启动系统,EFI 启动加载器程序可以利用EFI 启动服务来做很多事情,例如从硬盘读取文件.</p>
-<p>###<span id="secureboot">Secure Boot</span>###<br>Secure Boot只是UEFI的一个部分。两者的关系是局部与整体的关系。<br>Secure Boot的目的，是防止恶意软件侵入。它的做法就是采用密钥。UEFI规定，主板出厂的时候，可以内置一些可靠的公钥。然后，任何想要在这块主板上加载的操作系统或者硬件驱动程序，都必须通过这些公钥的认证。也就是说，这些软件必须用对应的私钥签署过，否则主板拒绝加载。由于恶意软件不可能通过认证，因此就没有办法感染Boot。<br>这个设想是好的。但是，UEFI没规定哪些公钥是可靠的，也没规定谁负责颁发这些公钥，都留给硬件厂商自己决定。<br>现在，微软就是要求，主板厂商内置Windows 8的公钥。</p>
+<h2 id="让人烦躁却不得不知道的术语"><a href="#让人烦躁却不得不知道的术语" class="headerlink" title="让人烦躁却不得不知道的术语"></a><strong>让人烦躁却不得不知道的术语</strong></h2><p><strong>首先要明白,当我们按下电脑的开机键后,电脑在启动系统之前最先执行的一段程序是放在主板上的只读程序段名字叫Firmware,至于具体电脑的寄存器是怎么复位的,寄存器是怎么寻址到Firmware的,请看知乎大神的<a href="http://www.zhihu.com/question/22364502" target="_blank" rel="noopener">回答</a>. 我们只需要知道有这段程序,并且在启动系统前会走这段路程就足够了. 目前有两种类型的Firmware,一种是我们以前经常听到的 BIOS(发音:/ˈbaɪ.ɒs/),,那还有一种就是近几年兴起的用来代替BIOS的UEFI发音(pronounced as an initialism U-E-F-I or like “unify” without the n[a])),当我们按下电脑开机键后,电脑厂商的LOGO出来的时候狂按(F2|F12|F9|del 具体各个厂商不一样,我的联想小新就是F2)键就能进入到Firmware控制界面(Firmware setup utility,),接下来我们就看下这两种Firmware</strong></p>
+<h3 id="BIOS与UEFI"><a href="#BIOS与UEFI" class="headerlink" title="BIOS与UEFI"></a>BIOS与UEFI</h3><p>BIOS的启动方式是通过读取执行硬盘第一个扇区的代码,之后通过这段代码定位并且执行别的代码.由于BIOS的空间限制并且BIOS只能执行16bit的代码,BIOS在使用中有很多限制.相反的,UEFI 通过加载硬盘ESP分区上的efi文件来启动系统,EFI 启动加载器程序可以利用EFI 启动服务来做很多事情,例如从硬盘读取文件.</p>
+<h3 id="Secure-Boot"><a href="#Secure-Boot" class="headerlink" title="Secure Boot"></a><span id="secureboot">Secure Boot</span></h3><p>Secure Boot只是UEFI的一个部分。两者的关系是局部与整体的关系。<br>Secure Boot的目的，是防止恶意软件侵入。它的做法就是采用密钥。UEFI规定，主板出厂的时候，可以内置一些可靠的公钥。然后，任何想要在这块主板上加载的操作系统或者硬件驱动程序，都必须通过这些公钥的认证。也就是说，这些软件必须用对应的私钥签署过，否则主板拒绝加载。由于恶意软件不可能通过认证，因此就没有办法感染Boot。<br>这个设想是好的。但是，UEFI没规定哪些公钥是可靠的，也没规定谁负责颁发这些公钥，都留给硬件厂商自己决定。<br>现在，微软就是要求，主板厂商内置Windows 8的公钥。</p>
 <a id="more"></a>
-<p>###MBR与GPT###<br>我们在装系统的时候有时可能会遇到这种问题:<br><img src="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04installError.jpg" alt="installError"><br><strong>Windows无法安装到这个磁盘。选中的磁盘具有MBR分区表。在EFI系统上，Windows只能安装到GPT磁盘</strong><br>这句话的意思是说,你的磁盘以前是按着MBR方式分区的,现在你在UEFI启动方式上,想安装系统在这个磁盘上就必须将磁盘重新按照GPT方式分区.也就是说不同的启动方式,要对应不同的分区方式,系统才能正常安装.那什么是MBR什么是GPT?</p>
+<h3 id="MBR与GPT"><a href="#MBR与GPT" class="headerlink" title="MBR与GPT"></a>MBR与GPT</h3><p>我们在装系统的时候有时可能会遇到这种问题:<br><img src="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04installError.jpg" alt="installError"><br><strong>Windows无法安装到这个磁盘。选中的磁盘具有MBR分区表。在EFI系统上，Windows只能安装到GPT磁盘</strong><br>这句话的意思是说,你的磁盘以前是按着MBR方式分区的,现在你在UEFI启动方式上,想安装系统在这个磁盘上就必须将磁盘重新按照GPT方式分区.也就是说不同的启动方式,要对应不同的分区方式,系统才能正常安装.那什么是MBR什么是GPT?</p>
 <p>MBR和GPT是两种不同的存储磁盘分区信息方式,这些信息包括每个分区的起至位置,这样你的操作系统就知道哪个扇区属于哪个分区,以及哪个分区是可以启动的.MBR 使用的是传统的BIOS 分区表,GPT使用的是UEFI分区表.MBR的限制在于磁盘只能有四个主分区.并且主打只支持2T的容量.而GPT完全没有这些限制.</p>
 <p>那怎么知道现在的磁盘是什么方式分区的以及怎么选择分区方式呢?<br>这个很简单,我们用DiskGenus查看磁盘分区的时候,在菜单栏有选项,如果当前是按MBR分区,那么会出现<code>将磁盘分区转换为GPT分区</code>的选项,如果是按GPT分区的,那么<code>将磁盘分区转换为MBR分区</code>是可选的.同时,我们在对磁盘进行分区的时候可以选择分区方式,例如我要将磁盘按GPT方式分区:<br><img src="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04DiskDeniusPartition.jpg" alt="GPT分区"><br>可以看到DG工具会提示我们创建ESP分区和MSR分区.这两个分区是UEFI启动方式中非常重要的分区.</p>
 <blockquote>
@@ -472,8 +509,7 @@
 </li>
 </ul>
 <p>准备的差不多了,我们就可以正式开始装双系统了</p>
-<p>##<strong>磨刀不误砍柴功,正式开始装系统</strong>##</p>
-<p>开始装系统之前,还是有些工具需要准备:</p>
+<h2 id="磨刀不误砍柴功-正式开始装系统"><a href="#磨刀不误砍柴功-正式开始装系统" class="headerlink" title="磨刀不误砍柴功,正式开始装系统"></a><strong>磨刀不误砍柴功,正式开始装系统</strong></h2><p>开始装系统之前,还是有些工具需要准备:</p>
 <ol>
 <li>Ubuntu iso镜像文件,这个就是要安装的ubuntu系统了,<a href="http://www.ubuntu.com/download" target="_blank" rel="noopener">下载地址</a></li>
 <li>一个8g 大小U盘</li>
@@ -493,14 +529,13 @@
 <li>重启就进入到我们熟悉了GRUB引导界面了.默认第一项是进入ubuntu,然后还有windows boot manager 也就是win8系统.我们可以上下选择进入哪个系统.</li>
 </ol>
 <p><strong>至此ubuntu的安装就完成啦</strong></p>
-<p>##事后诸葛,看看双系统的和谐共处##</p>
-<p>###UEFI启动选项###<br><a href="#5">在第5步</a>中介绍把U盘设为第一启动项的时候,就看到其实这边我是已经安装好了ubuntu,现在系统的启动项包括EFI USB,ubuntu,Windows还有UEFI PXE Network 这几个启动项.在介绍ESP分区的时候看到了有几个<a href="#efi">efi</a>文件,这些文件和启动项是什么关系呢?<br>其实我们在ubuntu下有工具可以查看:</p>
+<h2 id="事后诸葛-看看双系统的和谐共处"><a href="#事后诸葛-看看双系统的和谐共处" class="headerlink" title="事后诸葛,看看双系统的和谐共处"></a>事后诸葛,看看双系统的和谐共处</h2><h3 id="UEFI启动选项"><a href="#UEFI启动选项" class="headerlink" title="UEFI启动选项"></a>UEFI启动选项</h3><p><a href="#5">在第5步</a>中介绍把U盘设为第一启动项的时候,就看到其实这边我是已经安装好了ubuntu,现在系统的启动项包括EFI USB,ubuntu,Windows还有UEFI PXE Network 这几个启动项.在介绍ESP分区的时候看到了有几个<a href="#efi">efi</a>文件,这些文件和启动项是什么关系呢?<br>其实我们在ubuntu下有工具可以查看:</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo efibootmgr -v</span><br></pre></td></tr></table></figure>
 <p>这个命令可以查看当前系统所有的可用启动项<br><img src="http://7xkr9a.com1.z0.glb.clouddn.com/15/08/04efibootmgr.png" alt="efibootmgr"><br>可以看到现在我的系统包含编号为0001,0003,2003,0004,2001,2002的启动项,而且我当前使用的是0001也就是ubuntu启动啦.往下看,可以发现没法启动项的启动文件都列出来了<br>ubuntu -&gt; /EFI/ubuntu/shimx64.efi<br>win boot manager -&gt; /EFI/Microsoft/Boot/bootmgfw.efi<br>Lenovo recovery system -&gt;/EFI/Microsoft/Boot/LrsBootMgr.efi</p>
 <blockquote>
 <p>注:<br>对Ubuntu来说在<a href="#efi">这里</a>我们看到,boot文件夹下有grub64.efi 和Shimx64.efi ,而且我们进入系统也是直接进入的ubuntu的grub程序界面.那为什么不是启动grub64.efi,shimx64.efi是什么东西?<br>其实他家看<a href="#secure">这里</a>发现,我安装完双系统后是将Secure Boot打开的.前面也说了打开Secure boot 除了win8别的系统应该没法启动的,这就是shimx64.efi的作用了.<br>Typically, EFI/ubuntu/grubx64.efi on the EFI System Partition (ESP) is the GRUB binary, and EFI/ubuntu/shimx64.efi is the binary for shim. The latter is a relatively simple program that provides a way to boot on a computer with Secure Boot active. On such a computer, an unsigned version of GRUB won’t launch, and signing GRUB with Microsoft’s keys is impossible, so shim bridges the gap and adds its own security tools that parallel those of Secure Boot.<br>原来shimx64.fei是可以在sercure boot打开的情况下启动grub.</p>
 </blockquote>
-<p>###<strong>ubuntu下挂载Windows的分区盘</strong>###<br>我安装完成后第一次进入Ubuntu,可以看到win下的磁盘分区,但是没法挂载,但当我进入一次Win系统后,再次进入ubuntu发现这些盘居然可以挂载了,那这样实现ubuntu和win的磁盘共享也不成问题了.</p>
+<h3 id="ubuntu下挂载Windows的分区盘"><a href="#ubuntu下挂载Windows的分区盘" class="headerlink" title="ubuntu下挂载Windows的分区盘"></a><strong>ubuntu下挂载Windows的分区盘</strong></h3><p>我安装完成后第一次进入Ubuntu,可以看到win下的磁盘分区,但是没法挂载,但当我进入一次Win系统后,再次进入ubuntu发现这些盘居然可以挂载了,那这样实现ubuntu和win的磁盘共享也不成问题了.</p>
 
       
     </div>
@@ -552,8 +587,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Ubuntu下为软件创建快捷方式/" rel="prev" title="Ubuntu下为软件创建快捷方式">
-                Ubuntu下为软件创建快捷方式 <i class="fa fa-chevron-right"></i>
+              <a href="/Android序列化/" rel="prev" title="Android序列化">
+                Android序列化 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -606,8 +641,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -639,7 +683,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -674,7 +720,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -701,6 +751,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#让人烦躁却不得不知道的术语"><span class="nav-number">1.</span> <span class="nav-text">让人烦躁却不得不知道的术语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BIOS与UEFI"><span class="nav-number">1.1.</span> <span class="nav-text">BIOS与UEFI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Secure-Boot"><span class="nav-number">1.2.</span> <span class="nav-text">Secure Boot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MBR与GPT"><span class="nav-number">1.3.</span> <span class="nav-text">MBR与GPT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#磨刀不误砍柴功-正式开始装系统"><span class="nav-number">2.</span> <span class="nav-text">磨刀不误砍柴功,正式开始装系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事后诸葛-看看双系统的和谐共处"><span class="nav-number">3.</span> <span class="nav-text">事后诸葛,看看双系统的和谐共处</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UEFI启动选项"><span class="nav-number">3.1.</span> <span class="nav-text">UEFI启动选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ubuntu下挂载Windows的分区盘"><span class="nav-number">3.2.</span> <span class="nav-text">ubuntu下挂载Windows的分区盘</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -721,7 +787,21 @@
   <span class="author" itemprop="copyrightHolder">YanceyWang</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">15k</span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">14 分钟</span>
   
 </div>
 
