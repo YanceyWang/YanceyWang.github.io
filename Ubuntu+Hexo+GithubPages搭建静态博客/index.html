@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="前言最近发生了一些事情，不知道该怎么面对，想让自己忙起来，没有时间去想别的事情。同时，让我对过去进行了一个反思，以及对将来进行了初步的规划，我想改变，也一定会改变，借此博客，记录我成长的点点滴滴。希望我希望看到的人能看到，也希望能给大家带来点帮助。  第一篇博客就用来记录下我搭建这个独立博客的经过吧 ##准备## ###静态博客和动态博客### 所谓静态博客，它是在写好文章后，在本地生成静态页面">
+<meta name="keywords" content="Hexo,Ubuntu,github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+Ubuntu+GithubPages搭建个人博客(基础篇)">
+<meta property="og:url" content="http://yancey.top/Ubuntu+Hexo+GithubPages搭建静态博客/index.html">
+<meta property="og:site_name" content="解忧杂货店">
+<meta property="og:description" content="前言最近发生了一些事情，不知道该怎么面对，想让自己忙起来，没有时间去想别的事情。同时，让我对过去进行了一个反思，以及对将来进行了初步的规划，我想改变，也一定会改变，借此博客，记录我成长的点点滴滴。希望我希望看到的人能看到，也希望能给大家带来点帮助。  第一篇博客就用来记录下我搭建这个独立博客的经过吧 ##准备## ###静态博客和动态博客### 所谓静态博客，它是在写好文章后，在本地生成静态页面">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30NewRepo.png">
+<meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30GithubIO.png">
+<meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30HelloWorld.png">
+<meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30UseYiliaTheme.png">
+<meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30niuIDvER.png">
+<meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30CreateRepo.png">
+<meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/307niuouterlink.png">
+<meta property="og:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30CreateStyle.png">
+<meta property="og:updated_time" content="2018-08-22T02:44:47.395Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo+Ubuntu+GithubPages搭建个人博客(基础篇)">
+<meta name="twitter:description" content="前言最近发生了一些事情，不知道该怎么面对，想让自己忙起来，没有时间去想别的事情。同时，让我对过去进行了一个反思，以及对将来进行了初步的规划，我想改变，也一定会改变，借此博客，记录我成长的点点滴滴。希望我希望看到的人能看到，也希望能给大家带来点帮助。  第一篇博客就用来记录下我搭建这个独立博客的经过吧 ##准备## ###静态博客和动态博客### 所谓静态博客，它是在写好文章后，在本地生成静态页面">
+<meta name="twitter:image" content="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30NewRepo.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yancey.top/Ubuntu+Hexo+GithubPages搭建静态博客/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Hexo+Ubuntu+GithubPages搭建个人博客(基础篇) | 解忧杂货店</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">解忧杂货店</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">You know I love you</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yancey.top/Ubuntu+Hexo+GithubPages搭建静态博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YanceyWang">
+      <meta itemprop="description" content="Android,安卓,linux,ubuntu">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="解忧杂货店">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hexo+Ubuntu+GithubPages搭建个人博客(基础篇)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2015-07-30 11:25:44" itemprop="dateCreated datePublished" datetime="2015-07-30T11:25:44+08:00">2015-07-30</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/搭建博客/" itemprop="url" rel="index"><span itemprop="name">搭建博客</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Ubuntu+Hexo+GithubPages搭建静态博客/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/Ubuntu+Hexo+GithubPages搭建静态博客/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p><strong>前言</strong><br>最近发生了一些事情，不知道该怎么面对，想让自己忙起来，没有时间去想别的事情。同时，让我对过去进行了一个反思，以及对将来进行了初步的规划，我想改变，也一定会改变，借此博客，记录我成长的点点滴滴。希望我希望看到的人能看到，也希望能给大家带来点帮助。</p>
+</blockquote>
+<p>第一篇博客就用来记录下我搭建这个独立博客的经过吧</p>
+<p>##<strong>准备</strong>##</p>
+<p>###<strong>静态博客和动态博客</strong>###</p>
+<p>所谓静态博客，它是在写好文章后，在本地生成静态页面后再上传到服务器（Jekyll在Github Page上的例子有点特殊，后面会讲到），而不是像传统的Wordpress等基于动态语言、数据库博客那样在访问的时候从数据库读取数据动态生成页面。静态博客最大的优点是速度快，对网站使用的空间要求也不高，想找一个不支持静态页面的空间也是挺难的，缺点嘛，功能没有Wordpress等传统博客那么强。静态博客的”静态”主要体现在浏览者的角度，而不是写作者的角度，其最终的HTML文件，也是计算机生成的。静态博客与动态博客的差别就好像去超市里买一罐咖啡与去咖啡厅点一杯咖啡的差别。</p>
+<p>在静态博客出现之前，更多的人选择的是传统的动态博客。传统的动态博客一般有2种常见的方法：</p>
+<blockquote>
+<ul>
+<li>自建博客网站：需要了解数据库、HTML/CSS和PHP等很多Web编程知识</li>
+<li>注册公共博客：一般要受制于公共博客服务提供商的博客创作工具的写作效率</li>
+</ul>
+</blockquote>
+<p>实际上大部分博主写博客仅仅是个人性质的，文章数量不多，流量也不大，所以并不需要自己建站那么复杂。但如果注册公共博客，又会非常依赖服务提供商所提供的主题、功能和写作工具，缺少自由度。静态博客就可以很好的弥补两者的缺点。静态博客和传统博客最大的区别就在于写作与发布的过程有所不同。</p>
+<p>静态博客首先会在本地进行离线写作，然后通过工具将离线本地作品转化为HTML网页发布到在线网站上<br>动态博客首先要建立网站（当然也可以注册一个公共博客服务），然后在线完成博客的编辑和发布<br>静态博客可以让博主更专注于写作，而不是花费很多精力在建站技术和写作工具上：</p>
+<blockquote>
+<ul>
+<li>博主不需要折腾各种建站技术，任何支持静态网页的主机空间和云存储空间都可以拿来发布博客</li>
+<li>博主可以自由选择自己喜欢的本地写作工具，而不需要受制于在线博客写作工具的质量火热用户体验</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<p>###<strong>GitHub 与 静态博客</strong>###</p>
+<p>静态博客是个新生事物。静态博客的流行跟著名的开源社区Github的支持是分不开的。因此，绝大部分静态博客平台设计得还是比较极客，更适合有一定编程技能的人来使用，并不适合完全零起点的完全没有编程知识的普通用户。而Github除提供在线Markdown编辑器之外，还提供了Github Page服务，可以将用户托管在Github上的Markdown博客发布为静态网站。博主完全可以将自己的博客站免费寄放在Github上。此外，通过Github发布博客，还有一个额外的好处，那就是你的博客文章可以用Git来管理，这样你就可以在Github上获得博客文章的完整发布历史（像程序员管理源代码一样），并且可以随时获取历史版本或回退和回退到特定的版本上，相当于有了强大的备份系统。</p>
+<p>###<strong>Hexo</strong></p>
+<p>hexo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。</p>
+<p><strong>本着不花钱，爱折腾的原则，本人选择Hexo加上Git Pages 的方法搭建自己的独立博客</strong></p>
+<p>##<strong>开始</strong></p>
+<p>###<strong>Hexo环境安装</strong></p>
+<blockquote>
+<p>在Hexo的<a href="https://hexo.io/docs/" target="_blank" rel="noopener">官网</a>详细介绍了Hexo的安装和使用，安装Hexo的前提是需要先安装Node js和Git。</p>
+</blockquote>
+<p>####<strong>Ubuntu 安装NodeJS</strong></p>
+<p>在ubuntu上安装Node.js也有很多方法，最常见的有两种：一种是通过Node.js的<a href="https://nodejs.org/" target="_blank" rel="noopener">官网</a>下载源码编译安装,另一种就是按照Hexo官网介绍的方法安装,这边以第二中方式为例.</p>
+<ul>
+<li>下载和安装nvm,nvm介绍<a href="http://weizhifeng.net/node-version-management-via-n-and-nvm.html" target="_blank" rel="noopener">请看</a>:</li>
+</ul>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#这边可以使用curl也可以通过wget</span></span><br><span class="line">$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br><span class="line"><span class="comment">#不过,我只有wget方法能成功</span></span><br><span class="line">$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure>
+<ul>
+<li>nvm安装好了之后,通过nvm安装node.js</li>
+</ul>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#0.12 为node.js版本,Current Version: v0.12.7</span></span><br><span class="line"><span class="variable">$nvm</span> isntall <span class="number">0.12</span></span><br></pre></td></tr></table></figure>
+<p>至此Nodejs安装完毕,我们可以通过命令查看nodejs 版本</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wyq@wyq-m81 ~ $ node -v</span><br><span class="line">v0.<span class="number">10.25</span></span><br></pre></td></tr></table></figure>
+<p>####<strong>Ubuntu安装Git</strong><br>在ubuntu中安装git还是相当简单的,直接使用包管理器进行安装就好:</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sudo</span> apt-get install git</span><br><span class="line"><span class="variable">$sudo</span> apt-get install git-core</span><br></pre></td></tr></table></figure>
+<p><strong>Nodejs 和 git都已经安装好了,接下来就可安装我们的主角Hexo了</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>安装过程有点慢,这个时候你可以问候一下GFW.</p>
+<p>###<strong>Github pages 仓库创建</strong></p>
+<p>安装好Hexo后,就该另一个主角Github pages 登场了.关于Github pages的介绍,请看<a href="https://pages.github.com/" target="_blank" rel="noopener">这里</a>,它主要的作用是github给你或你的团队展示你的项目的地方,我们用这个来放我的博客简直再适合不过了.<br><img src="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30NewRepo.png" alt="new repo"><br><img src="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30GithubIO.png" alt="new repo"></p>
+<p>Github pages本质还是你github上的一个repository,只不过它的命名规则是[suername].github.io的形式,并且每个github只能有这么一个这样的仓库.创建好这样的仓库后就可以在浏览器地址栏输入[username].github.io进行访问了.</p>
+<p>##<strong>执行</strong></p>
+<blockquote>
+<p>Hexo和Github pages 准备好以后,我们就可以正式开始博客建立了.</p>
+</blockquote>
+<p>###<strong>初始化本地博客目录</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在home新建一个文件夹,用于本地存放博客</span></span><br><span class="line"><span class="variable">$mkdir</span> Blogs</span><br><span class="line"><span class="variable">$cd</span> Blogs</span><br><span class="line"><span class="comment">#用hexo命令在Blogs目录中初始化环境</span></span><br><span class="line"><span class="variable">$hexo</span> init</span><br><span class="line"><span class="variable">$npm</span> install</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这个时候,其实Hexo为我们生成了一个默认的名为HelloWorld的一篇博客,接下来我们看下这篇博客</p>
+</blockquote>
+<p>###<strong>生成静态文件</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用hexo generate命令可以将我们编写的markdown文件转换成html文件</span></span><br><span class="line"><span class="variable">$hexo</span> generate</span><br></pre></td></tr></table></figure>
+<p>###<strong>本地服务开启</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wyq@wyq-m81 ~/Blog $ hexo server</span><br><span class="line">INFO  Hexo is running at http://<span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">4000</span>/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这个时候在浏览器地址栏输入localhost:4000就可看到Hexo为我们生成的这边博客了<br>大概就是这个样子(默认的标题和名字已经被我改掉啦)</p>
+</blockquote>
+<p><img src="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30HelloWorld.png" alt="默认HellowordPost"></p>
+<blockquote>
+<p>到此我们已经把基本建博客的流程走过一遍了,怎么样,是不是很easy呀.接下来我们完成三个事情:创建一个篇新的博客,给博客换个主题,上传到Github pages.</p>
+</blockquote>
+<p>###<strong>创建新的博客</strong></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用hexo new [postname]新建一篇博客</span></span><br><span class="line"><span class="variable">$hexo</span> new firstblog</span><br><span class="line"><span class="comment">#完成之后,进入到source/_psots目录就可以看到我们刚才新建的博客了</span></span><br><span class="line"><span class="variable">$cd</span> source/_posts</span><br><span class="line"><span class="variable">$ll</span></span><br><span class="line">drwxr-xr-x <span class="number">2</span> wyq wyq <span class="number">4096</span> Jul <span class="number">30</span> <span class="number">11</span>:<span class="number">25</span> .</span><br><span class="line">drwxr-xr-x <span class="number">3</span> wyq wyq <span class="number">4096</span> Jul <span class="number">29</span> <span class="number">16</span>:<span class="number">17</span> ..</span><br><span class="line">-rw-r--r-- <span class="number">1</span> wyq wyq   <span class="number">53</span> Jul <span class="number">30</span> <span class="number">11</span>:<span class="number">25</span> firstBlog.md</span><br><span class="line">-rw-r--r-- <span class="number">1</span> wyq wyq  <span class="number">852</span> Jul <span class="number">29</span> <span class="number">18</span>:<span class="number">04</span> HelloWorld.md</span><br><span class="line"><span class="comment">#firstBlog.md就是我们刚才新建的一篇博客</span></span><br></pre></td></tr></table></figure>
+<p>博客文章都是md格式的markdown文件,我们打开来看下<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Hexo默认为我们生成了三行</span></span><br><span class="line">title: firstBlog <span class="comment">#这边博客的标题</span></span><br><span class="line">date: <span class="number">2015</span>-<span class="number">07</span>-<span class="number">30</span> <span class="number">11</span>:<span class="number">25</span>:<span class="number">44</span> <span class="comment">#博客创建时间</span></span><br><span class="line">tags: <span class="comment">#博客的tag</span></span><br></pre></td></tr></table></figure></p>
+<p>那我们只需要使用markdown语法在这个文件里面写我们的博客就ok了,这里推荐在线markdwon编辑器,<a href="https://www.zybuluo.com" target="_blank" rel="noopener">CMD markdown</a>,至于markdown语法,我们只需要了解常用的就行了,学习成本几乎等于0,<a href="https://help.github.com/articles/markdown-basics/" target="_blank" rel="noopener">Github markdown语法</a></p>
+<p>###<strong>更改博客主题</strong><br>Hexo 有丰富的主题支持,这也是我选择它的原因之一,在<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">这里</a>列出了所有的Hexo 主题,大家可以选择自己喜欢的使用.我这里以Yilia为例</p>
+<p>在我们使用<code>hexo init</code> 初始化本地博客环境后,会看到如下的文件目录结构:</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<p>这边先直介绍其中几个:</p>
+<ul>
+<li>_config.yml文件整个博客的配置文件,</li>
+<li>source/_posts文件夹包含了当前整个博客的所有文章</li>
+<li>themes 文件夹包含了当前的主题文件.</li>
+</ul>
+<p>我们要使用<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia</a>主题</p>
+<ul>
+<li>在当前目录(这里就是Blogs)中,clone Yilla 代码</li>
+</ul>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+<p>*更改_config.yml文件,在最后加入使用主题语句</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: yilia</span><br></pre></td></tr></table></figure>
+<ul>
+<li>进入到主题目录,编辑主题配置文件</li>
+</ul>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$cd</span> themes/yilia</span><br><span class="line"><span class="variable">$vim</span> _congif.yml</span><br></pre></td></tr></table></figure>
+<p>主题文件的配置说明</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"># Header</span><br><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  所有文章: /archives</span><br><span class="line">  # 随笔: /tags/随笔</span><br><span class="line"></span><br><span class="line"># SubNav</span><br><span class="line">subnav:</span><br><span class="line">  github: "#"</span><br><span class="line">  weibo: "#"</span><br><span class="line">  rss: "#"</span><br><span class="line">  zhihu: "#"</span><br><span class="line">  #douban: "#"</span><br><span class="line">  #mail: "#"</span><br><span class="line">  #facebook: "#"</span><br><span class="line">  #google: "#"</span><br><span class="line">  #twitter: "#"</span><br><span class="line">  #linkedin: "#"</span><br><span class="line"></span><br><span class="line">rss: /atom.xml</span><br><span class="line"></span><br><span class="line"># Content</span><br><span class="line">excerpt_link: more</span><br><span class="line">fancybox: true</span><br><span class="line">mathjax: true</span><br><span class="line"></span><br><span class="line"># Miscellaneous</span><br><span class="line">google_analytics: ''</span><br><span class="line">favicon: /favicon.png</span><br><span class="line"></span><br><span class="line">#你的头像url</span><br><span class="line">avatar: ""</span><br><span class="line">#是否开启分享</span><br><span class="line">share: true</span><br><span class="line">#是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key</span><br><span class="line">#若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论</span><br><span class="line">duoshuo: true</span><br><span class="line">#是否开启云标签</span><br><span class="line">tagcloud: true</span><br><span class="line"></span><br><span class="line">#是否开启友情链接</span><br><span class="line">#不开启——</span><br><span class="line">#friends: false</span><br><span class="line">#开启——</span><br><span class="line">friends:</span><br><span class="line">  奥巴马的博客: http://localhost:4000/</span><br><span class="line">  卡卡的美丽传说: http://localhost:4000/</span><br><span class="line">  本泽马的博客: http://localhost:4000/</span><br><span class="line">  吉格斯的博客: http://localhost:4000/</span><br><span class="line">  习大大大不同: http://localhost:4000/</span><br><span class="line">  托蒂的博客: http://localhost:4000/</span><br><span class="line"></span><br><span class="line">#是否开启“关于我”。</span><br><span class="line">#不开启——</span><br><span class="line">#aboutme: false</span><br><span class="line">#开启——</span><br><span class="line">aboutme: 我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</span><br></pre></td></tr></table></figure>
+<p>###<strong>生成静态文件,在本地预览</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$hexo generate</span><br><span class="line">$hexo server</span><br></pre></td></tr></table></figure></p>
+<p>效果如下<br><img src="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30UseYiliaTheme.png" alt="use yilia theme"></p>
+<p>**ok,大功告成,就差把博客部署到github.io了</p>
+<p>##<strong>将博客部署到github pages中</strong><br>在博客配置文件_config.yml中,有个deployment一节,在这边我们进行github pages 的配置</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  type: git <span class="comment">#注意,这边是git不是github,hexo 3.0以后就要求使用git,不然会出现deploy失败情况.</span></span><br><span class="line">  repo: https://github.com/YanceyWang/YanceyWang.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>配置好了之后,就可以吧我们博客deploy到github 上啦.</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$hexo</span> clean</span><br><span class="line"><span class="variable">$hexo</span> generate</span><br><span class="line"><span class="variable">$hexo</span> deploy</span><br></pre></td></tr></table></figure>
+<p>之后,在地址栏输入[username.github.io] 就可以访问你的博客了.</p>
+<p>##<strong>使用7牛图床</strong></p>
+<p>考虑到博客的速度，同时也为了便于博客的迁移，图床是必须的。我墙裂推荐七牛，访问速度极快，支持日志、防盗链和水印。</p>
+<p>免费用户有每月10GB流量+总空间10GB+PUT/DELETE 10万次请求+GET 100万次请求，这对个人博客来说足够，不够的话点这个活动页面，也可通过邀请好友获得奖励，我也求一下七牛邀请。有一点要说明的是，七牛没有目录的概念，但是文件名可以包含/，比如2013/11/27/reading/photos-0.jpg，参考这里关于key-value存储系统。</p>
+<ul>
+<li><p><strong>首先要去7牛<a href="http://www.qiniu.com/" target="_blank" rel="noopener">官网</a>注册帐号,然后准备好身份证前后照,进行身份验证,不然很多功能无法使用.</strong><br>验证好了大概就是这个样子<br><img src="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30niuIDvER.png" alt="身份验证"></p>
+</li>
+<li><p><strong>接着就可以创建空间了</strong><br><img src="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30CreateRepo.png" alt="创建空间"></p>
+</li>
+<li><p><strong>然后进行图片上传,获取外连</strong><br><img src="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/307niuouterlink.png" alt="获取外连"></p>
+</li>
+<li><p><strong>还可以新建样式,给图片设置缩放,加水印等.</strong><br><img src="http://7xkr9a.com1.z0.glb.clouddn.com/15/07/30CreateStyle.png" alt="新建样式"></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>后记</strong><br>今天就写到这吧,本来昨天在公司已经配置的差不多了,以为回家能够轻车熟路的在windows上弄好环境,结果是我想多了.在ubuntu上用习惯了命令,在win上真是痛苦啊,想打开终端,<code>CTRL+ALT+T</code>,结果才发现是在win上,想看目录<code>ll</code>,结果提示没有这个命令..一气之下下载了Ubuntu 14.04 给PC装了双系统.<br>第一次写博客,肯定有很多不足之处,让大家见笑了,希望您提出您的宝贵意见,我会努力做的越来越好.<br>这篇文章只是Hexo搭博客的基础篇,可能会有进阶篇,会介绍域名购买,评论系统使用以及更多的一些优化.</p>
+</blockquote>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+            <a href="/tags/github/" rel="tag"># github</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/ubuntu小巧好用的类似QQ截图的软件/" rel="prev" title="ubuntu小巧好用的类似QQ截图的软件DeepinScrot">
+                ubuntu小巧好用的类似QQ截图的软件DeepinScrot <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">YanceyWang</p>
+              <p class="site-description motion-element" itemprop="description">Android,安卓,linux,ubuntu</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YanceyWang</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'YanceyWang',
+            repo: 'blogcomment',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '734e0d8d0293e69dfd3a0d8025576793d621580a',
+            
+                client_id: 'b163354fd7dd2437cebd'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
